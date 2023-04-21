@@ -7,6 +7,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "EMPLOYEE_DATA")
+@NamedQuery(query = "select e from Employee e where e.age > :age order by e.name", name = "emp name and age asc")
+@NamedQuery(query = "select e from Employee e order by e.name desc", name = "emp name desc")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -111,18 +113,18 @@ public class Employee {
         this.type = type;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Employee{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", age=" + age +
-//                ", dob=" + dob +
-//                ", type=" + type +
-//                ", ssn='" + ssn + '\'' +
-//                ", card=" + card +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", dob=" + dob +
+                ", type=" + type +
+                ", ssn='" + ssn + '\'' +
+                ", card=" + card +
+                '}';
+    }
 
     public void addPayStub(PayStub payStub) {
         this.payStubs.add(payStub);
