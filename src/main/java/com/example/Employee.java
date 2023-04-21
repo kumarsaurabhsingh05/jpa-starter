@@ -111,18 +111,18 @@ public class Employee {
         this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", dob=" + dob +
-                ", type=" + type +
-                ", ssn='" + ssn + '\'' +
-                ", card=" + card +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", age=" + age +
+//                ", dob=" + dob +
+//                ", type=" + type +
+//                ", ssn='" + ssn + '\'' +
+//                ", card=" + card +
+//                '}';
+//    }
 
     public void addPayStub(PayStub payStub) {
         this.payStubs.add(payStub);
